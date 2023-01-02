@@ -1006,7 +1006,7 @@ nav.navigation-main .navigation-block ul li > ul li a {
 .btn.btn-clean {
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.2);
-  color: white !important;
+  color: ghostwhite !important;
 }
 
 .btn.btn-clean:hover {
