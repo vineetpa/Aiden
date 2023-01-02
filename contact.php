@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,6 +38,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
@@ -196,49 +197,38 @@
 
                                                 <div class="contact-form clearfix">
                                                     <form action="mail.php" method="post" onsubmit="return false" id="contact_form">
+                                                    <input type="hidden" name="emailto" value="reservations@aidenvagatorgoa.com">
+                                                    <input type="hidden" name="return_file" value="contact.php">
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <input type="text" value="" class="form-control" placeholder="Your name" required="required">
+                                                                    <input type="text" name="Name" value="" class="form-control" placeholder="Your name" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <input type="email" value="" class="form-control" placeholder="Your email" required="required">
+                                                                    <input type="email" name="Email" value="" class="form-control" placeholder="Your email" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12">
 
                                                                 <div class="form-group">
-                                                                    <input type="text" value="" class="form-control" placeholder="Subject" required="required">
+                                                                    <input type="text" value="" name="subject" class="form-control" placeholder="Subject" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <textarea class="form-control" placeholder="Your message" rows="10"></textarea>
+                                                                    <textarea class="form-control" name="Message" placeholder="Your message" rows="10"></textarea>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12 text-center">
                                                                 <input type="submit" class="btn btn-clean" value="Send message" />
                                                             </div>
-                                                        </div>
-                                                        <?php if(isset($_GET['msg']))
-                                                        {
-                                                        require('constant.php');
-                                                        echo $_GET['g-recaptcha-response'];
-                                                        if($_GET['msg'] == "success")
-                                                        {
-                                                        echo '<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><p>Your details has been Successfully Send !</p></div>';
-                                                        }
-                                                        else if($_GET['msg'] == "error")
-                                                        {
-                                                        echo '<div class="alert alert-danger"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><p>Please Enter a Valid Details !</p></div>';
-                                                        }
-                                                        } ?>
+                                                        </div>                                                        
                                                     </form>
                                                 </div>
                                             </div>
