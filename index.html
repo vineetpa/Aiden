@@ -38,6 +38,64 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style>
+        #fade {
+            display: none;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=80);
+        }
+
+        #light {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 600px;
+            max-height: 360px;
+            margin-left: -300px;
+            margin-top: -180px;
+            border: 2px solid #FFF;
+            background: #FFF;
+            z-index: 1002;
+            overflow: visible;
+        }
+
+        #boxclose {
+            float: right;
+            cursor: pointer;
+            color: #fff;
+            border: 1px solid #AEAEAE;
+            border-radius: 3px;
+            background: #222222;
+            font-size: 31px;
+            font-weight: bold;
+            display: inline-block;
+            line-height: 0px;
+            padding: 11px 3px;
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            z-index: 1002;
+            opacity: 0.9;
+        }
+
+        .boxclose:before {
+            content: "×";
+        }
+
+        #fade:hover ~ #boxclose {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -73,17 +131,14 @@
                     <!-- navigation-top-right -->
 
                     <div class="navigation-top-right">
-                        <a class="box" href="#">
-                            <i class="icon icon-star"></i>
-                            Special offers
-                        </a>
-                        <a class="box" href="#">
-                            <i class="icon icon-tag"></i>
-                            Reservations
-                        </a>
-                        <a class="box" href="tel:5554280940">
+
+                        <a class="box" href="tel:8956582136">
                             <i class="icon icon-phone-handset"></i>
-                            5554280940
+                            8956582136
+                        </a>
+                        <a class="box" href="tel:8956582137">
+                            <i class="icon icon-phone-handset"></i>
+                            8956582137
                         </a>
                     </div>
                 </nav>
@@ -96,8 +151,8 @@
 
                     <div class="logo animated fadeIn">
                         <a href="index.html">
-                            <img class="logo-desktop" src="assets/images/logo.png" alt="Alternate Text" />
-                            <img class="logo-mobile" src="assets/images/logo-mobile.png" alt="Alternate Text" />
+                            <img class="logo-desktop" src="assets/images/logo.png" alt="Aiden" />
+                            <img class="logo-mobile" src="assets/images/logo-mobile.png" alt="Aiden" />
                         </a>
                     </div>
 
@@ -116,12 +171,8 @@
                                 <a href="index.html">Home</a>
 
                             </li>
-                            <li> 
-                                <a href="rooms-category.html">Rooms </a>
-                            </li>
                             <li>
-                                <a href="#">About us</a>
-
+                                <a href="rooms-category.html">Rooms </a>
                             </li>
                         </ul>
 
@@ -154,19 +205,26 @@
                 <!-- === slide item === -->
 
                 <div class="item" style="background-image:url(assets/images/slide-1.jpg)">
-                    <div class="box box-bottom text-right">
+                    <div class="box box-bottom text-center">
                         <div class="container">
                             <h2 class="title animated h1" data-animation="fadeInDown">
-                                The privacy and <br />
-                                <span>individuality of a custom</span>
+                                Indulge in the  <br />
+                                <span>tropical charm of Goa</span>
                             </h2>
                             <div class="desc animated" data-animation="fadeInUp">
-                                The Residences have their own dedicated private entrance as well <br />
-                                as an anonymous "celebrity" entrance, for ultimate privacy.
+                                Elevate your vacation with a stay at our hotel
                             </div>
                             <div class="animated" data-animation="fadeInUp">
-                                <a href="#" class="btn btn-clean">Virtual tour</a>
+                                <a href="#" class="btn btn-main" onclick="lightbox_open();">Glimpse</a>
                             </div>
+                            <div id="light">
+                                <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+                                <video id="VisaChipCardVideo" width="600" controls>
+                                    <source src="Videos/Cafe Aiden.mp4" type="video/mp4">
+                                    <!--Browser does not support <video> tag -->
+                                </video>
+                            </div>
+                            <div id="fade" onClick="lightbox_close();"></div>
                         </div>
                     </div>
                 </div>
@@ -177,13 +235,13 @@
                     <div class="box box-bottom text-center">
                         <div class="container">
                             <h2 class="title animated h1" data-animation="fadeInDown">
-                                A moment of <br /> <span>pure prestige</span>
+                                Merge yourself with <br /> <span> luxury</span>
                             </h2>
                             <div class="desc animated" data-animation="fadeInUp">
-                                Lavish social and business events
+                                Escape the ordinary
                             </div>
                             <div class="desc animated" data-animation="fadeInUp">
-                                and unforgettable weddings.
+                                and indulge in the extraordinary
                             </div>
                         </div>
                     </div>
@@ -194,9 +252,8 @@
                 <div class="item" style="background-image:url(assets/images/slide-2.jpg)">
                     <div class="box box-bottom text-center">
                         <div class="container">
-                            <h2 class="title animated h1" data-animation="fadeInDown">Fairmont managed!</h2>
-                            <div class="desc animated" data-animation="fadeInUp">The elegant Champagne Bar, the stylish Aiden Club.</div>
-                            <div class="desc animated" data-animation="fadeInUp">Guestrooms and luxurious suites</div>
+                            <h2 class="title animated h1" data-animation="fadeInDown">Rediscover, serenity</h2>
+                            <div class="desc animated" data-animation="fadeInUp">Where comfort meets style</div> 
                             <div class="animated" data-animation="fadeInUp">
                                 <a href="#" class="btn btn-clean">Get insipred</a>
                             </div>
@@ -355,7 +412,7 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Rooms accommodation <a href="rooms-category.html" class="btn btn-sm btn-clean-dark">View all</a></h2>
+                    <h2 class="title">Rooms accommodation</h2>
                     <p>Designed as a privileged almost private place where you'll feel right at home</p>
                 </div>
             </div>
@@ -375,15 +432,14 @@
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h3 class="title"><a href="room-overview.html">Club Room</a></h3>
-                                    <p>Single room</p>
+                                    <h3 class="title"><a href="room-overview-superior-double-room.html">Superior Double Room</a></h3>
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
+                                        <a href="room-overview-superior-double-room.html" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
-                                        <span class="price h4">&#8377; 98,00</span>
+                                        <span class="price h4">&#8377; 10,999 + GST</span>
                                         <span>per night</span>
                                     </div>
                                 </div>
@@ -400,15 +456,14 @@
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h3 class="title"><a href="room-overview.html">Classic Room</a></h3>
-                                    <p>Double room</p>
+                                    <h3 class="title"><a href="room-overview-deluxe-king-room.html">Deluxe King Room</a></h3>
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
+                                        <a href="room-overview-deluxe-king-room.html" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
-                                        <span class="price h4">&#8377; 129,00</span>
+                                        <span class="price h4">&#8377; 11,999 + GST</span>
                                         <span>per night</span>
                                     </div>
                                 </div>
@@ -416,55 +471,6 @@
                         </article>
                     </div>
 
-                    <!-- === rooms item === -->
-
-                    <div class="item">
-                        <article>
-                            <div class="image">
-                                <img src="assets/images/room-3.jpg" alt="" />
-                            </div>
-                            <div class="details">
-                                <div class="text">
-                                    <h3 class="title"><a href="room-overview.html">Superior Room</a></h3>
-                                    <p>Queen size bed</p>
-                                </div>
-                                <div class="book">
-                                    <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
-                                    </div>
-                                    <div>
-                                        <span class="price h4">&#8377; 159,00</span>
-                                        <span>per night</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- === rooms item === -->
-
-                    <div class="item">
-                        <article>
-                            <div class="image">
-                                <img src="assets/images/room-4.jpg" alt="" />
-                            </div>
-                            <div class="details">
-                                <div class="text">
-                                    <h3 class="title"><a href="room-overview.html">Family Suite</a></h3>
-                                    <p>Family room</p>
-                                </div>
-                                <div class="book">
-                                    <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
-                                    </div>
-                                    <div>
-                                        <span class="price h4">&#8377; 199,00</span>
-                                        <span>per night</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
 
                 </div><!--/owl-rooms-->
 
@@ -480,9 +486,9 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Resort facilities <a href="#" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
+                    <h2 class="title">Hotel facilities <a href="gallery.html" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
                     <p>
-                        With the best luxury spa, salon and fitness experiences
+                        With the best restaurant and fitness experiences
                     </p>
                 </div>
             </div>
@@ -497,16 +503,16 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h4">Spa center</span>
+                            <span class="text-intro h4">Restaurant</span>
                         </div>
                     </div>
                     <!--main text-->
                     <figure>
-                        <h4>Spa center</h4>
-                        <figcaption>Unparalleled devotion to luxury</figcaption>
+                        <h4>Restaurant</h4>
+                        <figcaption>Bringing class to cuisine</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="#">Anchor link</a>
+                    <a href="Restaurant.html">Restaurant</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -521,10 +527,10 @@
                     <!--main text-->
                     <figure>
                         <h4>Gym</h4>
-                        <figcaption>Care about results</figcaption>
+                        <figcaption>In Pursuit of Good Health</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="#">Anchor link</a>
+                    <a href="Gym.html">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -538,10 +544,10 @@
                     </div>
                     <figure>
                         <h4>Fitness</h4>
-                        <figcaption>Your daily activities</figcaption>
+                        <figcaption>Being physically fit and healthy</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="#">Anchor link</a>
+                    <a href="Fitness.html">Fitness</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -552,26 +558,18 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h4">Beauty salon</span>
+                            <span class="text-intro h4">Swimming Pool</span>
                         </div>
                     </div>
                     <!--main text-->
                     <figure>
-                        <h4>Beauty salon</h4>
-                        <figcaption>Hair salons and spas</figcaption>
+                        <h4>Swimming Pool</h4>
+                        <figcaption>Keeping it cool in the pool</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="#">Anchor link</a>
+                    <a href="Swimming-Pool.html">Swimming Pool</a>
                 </li>
 
-                <!-- === stretcher item more === -->
-
-                <li class="stretcher-item more">
-                    <div class="more-icon">
-                        <span data-title-show="Show more" data-title-hide="+"></span>
-                    </div>
-                    <a href="#">Anchor link</a>
-                </li>
 
             </ul>
         </section>
@@ -854,171 +852,6 @@
         </section>
 
 
-        <!-- ======================== Image blocks ======================== -->
-
-        <section class="image-blocks image-blocks-header">
-
-            <div class="section-header" style="background-image:url(assets/images/header-1.jpg)">
-                <div class="container">
-                    <h2 class="title">Apartment residences <a href="rooms-category.html" class="btn btn-sm btn-clean">View all</a></h2>
-                    <p>At home while on the road. </p>
-                </div>
-            </div>
-
-            <div class="container">
-
-                <!--item block -->
-                <div class="blocks blocks-left">
-                    <div class="item">
-                        <div class="text">
-
-                            <!-- === room info === -->
-
-                            <h2 class="title">Presidential <br />Suite</h2>
-                            <p>
-                                Newly refurnished luxury accommodation with finest quality linen & quality decor.
-                                Air Conditioning Electric Blankets, Ironing Boards, Mini Bar, Flat Screen & Free Inhouse Movies, WiFi
-                                and Housekeeping by request.
-                            </p>
-
-                            <!-- === room facilities === -->
-
-                            <div class="room-facilities">
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-guest"></i> 4 Persons</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-roomservice"></i> Room service</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-king-bed"></i> Kingsize bed</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-kitchen"></i> All inclusive</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-compas"></i> 460 sqft room</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-tv"></i> TV</figcaption>
-                                </figure>
-
-                            </div>
-
-                            <!-- === booking === -->
-
-                            <div class="book">
-                                <div>
-                                    <a href="room-overview.html" class="btn btn-danger btn-lg">Book</a>
-                                </div>
-                                <div>
-                                    <span class="price h2">&#8377; 129,00</span>
-                                    <span>per night</span>
-                                </div>
-                            </div> <!--/booking-->
-
-                        </div><!--/text-->
-                    </div> <!--/item-->
-
-                    <div class="image" style="background-image:url(assets/images/apartment-1.jpg)">
-                        <img src="assets/images/apartment-1.jpg" alt="" />
-                    </div>
-                </div>
-
-                <!--item block -->
-                <div class="blocks blocks-right">
-                    <div class="item">
-                        <div class="text">
-
-                            <!-- === room info === -->
-
-                            <h2 class="title">Luxury <br />appartment</h2>
-                            <p>
-                                The highest level of living with luxury. Residences are distinctively designed and exquisitely appointed,
-                                creating ideal places where memories are made and experiences are genuine.
-                            </p>
-
-                            <!-- === room facilities === -->
-
-                            <div class="room-facilities">
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-guest"></i> 4 Persons</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-king-bed"></i> Kingsize bed</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-roomservice"></i> Room service</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-kitchen"></i> All inclusive</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-compas"></i> 460 sqft room</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-tv"></i> TV</figcaption>
-                                </figure>
-
-                            </div>
-
-                            <!-- === booking === -->
-
-                            <div class="book">
-                                <div>
-                                    <a href="room-overview.html" class="btn btn-danger btn-lg">Book</a>
-                                </div>
-                                <div>
-                                    <span class="price h2">&#8377; 229,00</span>
-                                    <span>per night</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="image" style="background-image:url(assets/images/apartment-2.jpg)">
-                        <img src="assets/images/apartment-2.jpg" alt="" />
-                    </div>
-                </div>
-
-            </div> <!--/container-->
-        </section>
 
         <!-- ======================== Quotes ======================== -->
 
@@ -1159,13 +992,15 @@
                 <div class="footer-links">
                     <div class="row">
                         <div class="col-sm-6 footer-left">
-                            <a href="#">Sitemap</a> &nbsp; | &nbsp; <a href="#">Privacy policy</a> | &nbsp; <a href="#">Guest book</a>
                         </div>
                         <div class="col-sm-6 footer-right">
-                            <a href="#">Gallery</a> &nbsp; | &nbsp; <a href="#">Reservations</a> | &nbsp; <a class="box" href="tel:5554280940">
+                            <a href="gallery.html">Gallery</a> &nbsp; |   &nbsp; <a class="box" href="tel:8956582136">
                                 <i class="icon icon-phone-handset"></i>
-                                5554280940
-                            </a> 
+                                8956582136
+                            </a>| &nbsp; <a class="box" href="tel:8956582137">
+                                <i class="icon icon-phone-handset"></i>
+                                8956582137
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1205,7 +1040,32 @@
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/jquery.owl.carousel.js"></script>
     <script src="js/main.js"></script>
-     
+    <script type="text/javascript">
+        window.document.onkeydown = function (e) {
+            if (!e) {
+                e = event;
+            }
+            if (e.keyCode == 27) {
+                lightbox_close();
+            }
+        }
+
+        function lightbox_open() {
+            var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+            window.scrollTo(0, 0);
+            document.getElementById('light').style.display = 'block';
+            document.getElementById('fade').style.display = 'block';
+            lightBoxVideo.play();
+        }
+
+        function lightbox_close() {
+            var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+            document.getElementById('light').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+            lightBoxVideo.pause();
+        }
+    </script>
+
 </body>
 
 </html>

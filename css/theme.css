@@ -1919,12 +1919,12 @@ section {
 
 @media (min-width: 992px) {
   .stretcher-wrapper .stretcher .stretcher-item {
-    width: 23%;
+    width: 25%;
     height: 100%;
     display: inline-block;
   }
   .stretcher-wrapper .stretcher .stretcher-item.inactive {
-    width: 18%;
+    width: 20%;
   }
   .stretcher-wrapper .stretcher .stretcher-item.active {
     width: 38%;
