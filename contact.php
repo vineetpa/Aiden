@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -120,11 +120,7 @@
                             </li>
                             <li>
                                 <a href="rooms-category.html">Rooms </a>
-                            </li>
-                            <li>
-                                <a href="#">About us</a>
-
-                            </li>
+                            </li>                          
                         </ul>
 
                         <!-- navigation-right -->
@@ -256,8 +252,8 @@
                                                 <figcaption>
                                                     <strong>Call us</strong>
                                                     <span>
-                                                        <strong>T</strong> +1 222 333 4444 <br />
-                                                        <strong>F</strong> +1 222 333 5555
+                                                         +918956582136 <br />
+                                                         +918956582137
                                                     </span>
                                                 </figcaption>
                                             </figure>
