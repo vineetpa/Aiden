@@ -155,7 +155,7 @@
 
             <!-- ===  Page header === -->
 
-            <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+            <div class="page-header" style="background-image:url(assets/images/contact.jpg)">
                 <div class="container">
                     <h2 class="title">Contact</h2>
                     <p>The place, our services & our team</p>
@@ -170,7 +170,7 @@
 
                     <!-- === Google map === -->
 
-                    <div class="map" id="map"></div>
+                    <div class="map"></div>
 
                     <div class="row">
 
@@ -225,20 +225,7 @@
                                                             <div class="col-md-12 text-center">
                                                                 <input type="submit" class="btn btn-clean" value="Send message" />
                                                             </div>
-                                                        </div>
-                                                        <?php if(isset($_GET['msg']))
-                                                        {
-                                                        require('constant.php');
-                                                        echo $_GET['g-recaptcha-response'];
-                                                        if($_GET['msg'] == "success")
-                                                        {
-                                                        echo '<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><p>Your details has been Successfully Send !</p></div>';
-                                                        }
-                                                        else if($_GET['msg'] == "error")
-                                                        {
-                                                        echo '<div class="alert alert-danger"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><p>Please Enter a Valid Details !</p></div>';
-                                                        }
-                                                        } ?>
+                                                        </div>                                                       
                                                     </form>
                                                 </div>
                                             </div>
