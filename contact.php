@@ -55,16 +55,13 @@
 
                 <!-- === navigation-top === -->
 
-                <nav class="navigation-top clearfix">
+               <nav class="navigation-top clearfix">
 
                     <!-- navigation-top-left -->
 
                     <div class="navigation-top-left">
-                        <a class="box" href="#">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a class="box" href="#">
-                            <i class="fa fa-twitter"></i>
+                        <a class="box" href="https://www.instagram.com/aidenvagatorgoa/" target="_blank">
+                            <i class="fa fa-instagram"></i>
                         </a>
                         <a class="box" href="#">
                             <i class="fa fa-youtube"></i>
@@ -74,17 +71,14 @@
                     <!-- navigation-top-right -->
 
                     <div class="navigation-top-right">
-                        <a class="box" href="#">
-                            <i class="icon icon-star"></i>
-                            Special offers
-                        </a>
-                        <a class="box" href="reservation-1.html">
-                            <i class="icon icon-tag"></i>
-                            Reservations
-                        </a>
-                        <a class="box" href="#">
+
+                        <a class="box" href="tel:8956582136">
                             <i class="icon icon-phone-handset"></i>
-                            (01) 252-3333
+                            8956582136
+                        </a>
+                        <a class="box" href="tel:8956582137">
+                            <i class="icon icon-phone-handset"></i>
+                            8956582137
                         </a>
                     </div>
                 </nav>
@@ -133,7 +127,7 @@
                                 <a href="#">Blog </a>
                             </li>
                             <li>
-                                <a href="contact.html">Contact</a>
+                                <a href="contact.php">Contact</a>
                             </li>
                         </ul>
 
@@ -222,7 +216,7 @@
                                                             </div>
 
                                                             <div class="col-md-12 text-center">
-                                                                <input type="submit" class="btn btn-clean" value="Send message" />
+                                                                <input type="submit" class="btn btn-clean cnt-btn" value="Send message" />
                                                             </div>
                                                         </div>                                                        
                                                     </form>
@@ -264,8 +258,7 @@
                                                 <figcaption>
                                                     <strong>Working hours</strong>
                                                     <span>
-                                                        <strong>Mon</strong> - Sat: 10 am - 11 pm <br />
-                                                        <strong>Sun</strong> 9am - 12 pm
+                                                         <img src="assets/images/24hours.png" />
                                                     </span>
                                                 </figcaption>
                                             </figure>
@@ -303,35 +296,38 @@
             <div class="container">
 
                 <!--footer links-->
-                <div class="footer-links">
+               <div class="footer-links">
                     <div class="row">
                         <div class="col-sm-6 footer-left">
-                            <a href="#">Sitemap</a> &nbsp; | &nbsp; <a href="#">Privacy policy</a> | &nbsp; <a href="#">Guest book</a>
+                            
                         </div>
-                        <div class="col-sm-6 footer-right">
-                            <a href="#">Gallery</a> &nbsp; | &nbsp; <a href="#">Reservations</a> | &nbsp; <a href="#">Help center</a>
+                         <div class="col-sm-6 footer-right">
+                              <a href="gallery.html">Gallery</a> &nbsp; |   &nbsp; <a class="box" href="tel:8956582136">
+                                <i class="icon icon-phone-handset"></i>
+                                8956582136
+                            </a>| &nbsp; <a class="box" href="tel:8956582137">
+                                <i class="icon icon-phone-handset"></i>
+                                8956582137
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!--footer social-->
 
-                <div class="footer-social">
+               <div class="footer-social">
                     <div class="row">
                         <div class="col-sm-12 text-center hidden">
                             <a href="" class="footer-logo"><img src="assets/images/logo.png" alt="Alternate Text" /></a>
                         </div>
                         <div class="col-sm-12 icons">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.instagram.com/aidenvagatorgoa/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                         <div class="col-sm-12 copyright">
-                            <small>Copyright &copy; 2022 &nbsp;</small>
+                            <small>Copyright AIDEN &copy; 2022 &nbsp;</small>
                         </div>
                         <div class="col-sm-12 text-center">
                             <img src="assets/images/logo-footer.png" alt="" />
@@ -352,6 +348,36 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
             defer></script>
     <script>
+$(document).ready(function() {
+    var firstValue = Math.round(Math.random() * 10 + 1);
+    var secondValue = Math.round(Math.random() * 10 + 1);
+    var myArray = [' + ', ' - ', ' * ']; 
+	var mathematicSymbol = myArray[Math.floor(Math.random() * myArray.length)];
+   // $("#captchaValues").val(firstValue + mathematicSymbol + secondValue);
+	$(".cnt-btn").click(function()
+	{
+        var valid = $('#contact_form')[0].checkValidity();
+        	if(valid != false)
+			{
+				$("#contact_form")[0].submit(); 		
+			}
+			return false;
+  //      if (eval($("#captchaValues").val()) != $("#captchaCalculation").val())
+		//{
+		//	$("#captchaCalculation").val("");
+		//	return false;
+  //      } 
+		//else
+		//{
+		//	if(valid != false)
+		//	{
+		//		$("#contact_form")[0].submit(); 		
+		//	}
+		//	return false;
+			
+		//}
+    });
+});
         function initMap() {
             var contentString =
                 '<div class="map-info-window">' +
