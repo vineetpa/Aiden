@@ -1,6 +1,6 @@
 $(function () {
-    const strPool = '../../assets/images/gallery/Pool/';
-    const strRes = '../../assets/images/gallery/Restaurant/';
+    const strPool = 'assets/images/gallery/Pool/';
+    const strRes = 'assets/images/gallery/Restaurant/';
     const strR = '.jpg';
     const imgs = [
         {
