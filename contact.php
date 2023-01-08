@@ -114,17 +114,20 @@
                             </li>
                             <li>
                                 <a href="rooms-category.html">Rooms </a>
-                            </li>                          
+                            </li>
+                            <li>
+                                <a href="gallery.html">Aiden Tour </a>
+                            </li>
                         </ul>
 
                         <!-- navigation-right -->
 
                         <ul class="navigation-right">
                             <li>
-                                <a href="#">Facilities</a>
+                                <a href="Restaurant.html">Restaurant</a>
                             </li>
                             <li>
-                                <a href="#">Blog </a>
+                                <a href="#">Rate your stay </a>
                             </li>
                             <li>
                                 <a href="contact.php">Contact</a>
@@ -146,7 +149,7 @@
 
             <!-- ===  Page header === -->
 
-            <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+            <div class="page-header" style="background-image:url(assets/images/contact.jpg);padding-bottom:85px">
                 <div class="container">
                     <h2 class="title">Contact</h2>
                     <p>The place, our services & our team</p>
@@ -161,7 +164,7 @@
 
                     <!-- === Google map === -->
 
-                    <div class="map" id="map"></div>
+                    <div class="map"></div>
 
                     <div class="row">
 
@@ -178,7 +181,7 @@
                                         <div class="col-md-offset-1 col-md-10 text-center">
                                             <h2 class="title">Send an email</h2>
                                             <p>
-                                                Please use this form if you have any questions about our products <br /> and we'll get back with you very soon.
+                                                Please use this form if you have any questions about us <br /> and we'll get back with you very soon.
                                             </p>
 
                                             <div class="contact-form-wrapper">
@@ -186,37 +189,38 @@
                                                 <a class="btn btn-clean open-form" data-text-open="Contact us via form" data-text-close="Close form">Contact us via form</a>
 
                                                 <div class="contact-form clearfix">
-                                                    <form action="mail.php" method="post" onsubmit="return false" id="contact_form">
-                                                    <input type="hidden" name="emailto" value="reservations@aidenvagatorgoa.com">
-                                                    <input type="hidden" name="return_file" value="contact.php">
+                                                    <h4 class="sent-notification"></h4>
+                                                    <form id="contact_form">
+                                                    <!--<input type="hidden" name="emailto" value="reservations@aidenvagatorgoa.com">
+                                                    <input type="hidden" name="return_file" value="contact.php">-->
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <input type="text" name="Name" value="" class="form-control" placeholder="Your name" required="required">
+                                                                    <input id="name" type="text" name="name" value="" class="form-control" placeholder="Your name" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <input type="email" name="Email" value="" class="form-control" placeholder="Your email" required="required">
+                                                                    <input id="email" type="email" name="email" value="" class="form-control" placeholder="Your email" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12">
 
                                                                 <div class="form-group">
-                                                                    <input type="text" value="" name="subject" class="form-control" placeholder="Subject" required="required">
+                                                                    <input id="subject" type="text" value="" name="subject" class="form-control" placeholder="Subject" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <textarea class="form-control" name="Message" placeholder="Your message" rows="10"></textarea>
+                                                                    <textarea id="message" class="form-control" name="body" placeholder="Your message" rows="10"></textarea>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12 text-center">
-                                                                <input type="submit" class="btn btn-clean cnt-btn" value="Send message" />
+                                                                <button onclick="sendEmail()" type="button" class="btn btn-clean" value="Send message">Send Message</button>
                                                             </div>
                                                         </div>                                                        
                                                     </form>
@@ -232,12 +236,14 @@
                                 <div class="contact-info">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <figure class="text-center">
-                                                <span class="icon icon-map-marker"></span>
-                                                <figcaption>
-                                                    <strong>Where are we?</strong>
-                                                    <span>SY. No. 330/1, Anjuna,  <br />Vagator, Mapusa, <br />Goa 403502</span>
-                                                </figcaption>
+                                             <figure class="text-center">
+                                                <a href="http://maps.google.com/maps?q=330/1%20Anjuna%20Vagator%20Mapusa%20Goa%2C%20403502" target="_blank">
+                                                    <span class="icon icon-map-marker"></span>
+                                                    <figcaption>
+                                                        <strong>Where are we?</strong>
+                                                        <span>SY. No. 330/1, Anjuna,  <br />Vagator, Mapusa, <br />Goa 403502</span>
+                                                    </figcaption>
+                                                </a>
                                             </figure>
                                         </div>
                                         <div class="col-sm-4">
@@ -280,7 +286,7 @@
                 <div class="box">
                     <h2 class="title">Subscribe</h2>
                     <div class="text">
-                        <p>& receive free premium gifts</p>
+                        <p>& stay updated with latest deals on staying with us</p>
                     </div>
                     <div class="form-group">
                         <input type="text" value="" placeholder="Subscribe" class="form-control" />
@@ -345,71 +351,42 @@
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/jquery.owl.carousel.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-            defer></script>
-    <script>
-$(document).ready(function() {
-    var firstValue = Math.round(Math.random() * 10 + 1);
-    var secondValue = Math.round(Math.random() * 10 + 1);
-    var myArray = [' + ', ' - ', ' * ']; 
-	var mathematicSymbol = myArray[Math.floor(Math.random() * myArray.length)];
-   // $("#captchaValues").val(firstValue + mathematicSymbol + secondValue);
-	$(".cnt-btn").click(function()
-	{
-        var valid = $('#contact_form')[0].checkValidity();
-        	if(valid != false)
-			{
-				$("#contact_form")[0].submit(); 		
-			}
-			return false;
-  //      if (eval($("#captchaValues").val()) != $("#captchaCalculation").val())
-		//{
-		//	$("#captchaCalculation").val("");
-		//	return false;
-  //      } 
-		//else
-		//{
-		//	if(valid != false)
-		//	{
-		//		$("#contact_form")[0].submit(); 		
-		//	}
-		//	return false;
-			
-		//}
-    });
-});
-        function initMap() {
-            var contentString =
-                '<div class="map-info-window">' +
-                '<p><img src="assets/images/logo-dark.png" alt=""></p>' +
-                '<p><strong>Aiden by Best Western Vagator Goa</strong></p>' +
-                '<p><i class="fa fa-map-marker"></i>SY. No. 330/1, Anjuna, Vagator, Mapusa, Goa 403502</p>' +
-                '<p><i class="fa fa-phone"></i> +919874563210</p>' +
-                '<p><i class="fa fa-clock-o"></i> 06am - 11pm</p>' +
-                '</div>';
 
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
-            //set default pposition
-            var myLatLng = { lat: 15.60104, lng: 73.73635 };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: myLatLng,
-                styles: [{ "featureType": "administrative.locality", "elementType": "all", "stylers": [{ "hue": "#2c2e33" }, { "saturation": 7 }, { "lightness": 19 }, { "visibility": "on" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "hue": "#ffffff" }, { "saturation": -100 }, { "lightness": 100 }, { "visibility": "simplified" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "hue": "#ffffff" }, { "saturation": -100 }, { "lightness": 100 }, { "visibility": "off" }] }, { "featureType": "road", "elementType": "geometry", "stylers": [{ "hue": "#bbc0c4" }, { "saturation": -93 }, { "lightness": 31 }, { "visibility": "simplified" }] }, { "featureType": "road", "elementType": "labels", "stylers": [{ "hue": "#bbc0c4" }, { "saturation": -93 }, { "lightness": 31 }, { "visibility": "on" }] }, { "featureType": "road.arterial", "elementType": "labels", "stylers": [{ "hue": "#bbc0c4" }, { "saturation": -93 }, { "lightness": -2 }, { "visibility": "simplified" }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "hue": "#e9ebed" }, { "saturation": -90 }, { "lightness": -8 }, { "visibility": "simplified" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "hue": "#e9ebed" }, { "saturation": 10 }, { "lightness": 69 }, { "visibility": "on" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "hue": "#e9ebed" }, { "saturation": -78 }, { "lightness": 67 }, { "visibility": "simplified" }] }]
-            });
-            //set marker
-            var image = 'assets/images/map-icon.png';
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: "Aiden by Best Western Vagator Goa",
-                icon: image
-            });
-            marker.addListener('click', function () {
-                infowindow.open(map, marker);
-            });
+    <script type="text/javascript">
+        function sendEmail() {
+            var name = $("#name");
+            var email = $("#email");
+            var subject = $("#subject");
+            var body = $("#message");
+
+            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                $.ajax({
+                    url: 'mail.php',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {
+                        name: name.val(),
+                        email: email.val(),
+                        subject: subject.val(),
+                        body: body.val()
+                    }, success: function (response) {
+                        $('#contact_form')[0].reset();
+                        $('.sent-notification').text("Message sent successfully");
+                    }
+                })
+            }
         }
+
+        function isNotEmpty(caller) {
+            if (caller.val() == "") {
+                caller.css('border', '1px solid red');
+                return false;
+            }
+            else {
+                caller.css('border', '');
+                return true;
+            }
+        }     
     </script>
 
 </body>

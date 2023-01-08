@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,7 +16,7 @@
     <link rel="icon" href="favicon.ico">
 
     <!--Title-->
-    <title>Gallery | Aiden by Best Western Vagator Goa</title>
+    <title>Reviews | Aiden by Best Western Vagator Goa</title>
 
     <!--CSS styles-->
     <link rel="stylesheet" media="all" href="css/bootstrap.css" />
@@ -38,15 +38,47 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" media="all" href="css/gallery.css" />
-
-    <script src="js/gallery.js"></script>
-
-    <style type="text/css">
-        .svgheight{
-            height: 2.5em;
+    <style>
+        .rate {
+            float: left;
+            padding: 0;
         }
+
+            .rate:not(:checked) > input {
+                position: absolute;
+                top: -9999px;
+            }
+
+            .rate:not(:checked) > label {
+                float: right;
+                width: 1em;
+                overflow: hidden;
+                white-space: nowrap;
+                cursor: pointer;
+                font-size: 30px;
+                color: #ccc;
+            }
+
+                .rate:not(:checked) > label:before {
+                    content: '★ ';
+                }
+
+            .rate > input:checked ~ label {
+                color: #ffc700;
+            }
+
+            .rate:not(:checked) > label:hover,
+            .rate:not(:checked) > label:hover ~ label {
+                color: #deb217;
+            }
+
+            .rate > input:checked + label:hover,
+            .rate > input:checked + label:hover ~ label,
+            .rate > input:checked ~ label:hover,
+            .rate > input:checked ~ label:hover ~ label,
+            .rate > label:hover ~ input:checked ~ label {
+                color: #c59b08;
+            }
     </style>
 </head>
 
@@ -64,14 +96,14 @@
 
                 <!-- === navigation-top === -->
 
-               <nav class="navigation-top clearfix">
+                <nav class="navigation-top clearfix">
 
                     <!-- navigation-top-left -->
 
                     <div class="navigation-top-left">
                         <a class="box" href="https://www.instagram.com/aidenvagatorgoa/" target="_blank">
                             <i class="fa fa-instagram"></i>
-                        </a>                        
+                        </a>
                         <a class="box" href="#">
                             <i class="fa fa-youtube"></i>
                         </a>
@@ -79,8 +111,8 @@
 
                     <!-- navigation-top-right -->
 
-                    <div class="navigation-top-right">                       
-                         <a class="box" href="tel:8956582136">
+                    <div class="navigation-top-right">
+                        <a class="box" href="tel:8956582136">
                             <i class="icon icon-phone-handset"></i>
                             8956582136
                         </a>
@@ -122,6 +154,9 @@
                             <li>
                                 <a href="rooms-category.html">Rooms </a>
                             </li>
+                            <li>
+                                <a href="gallery.html">Aiden Tour </a>
+                            </li>
                         </ul>
 
                         <!-- navigation-right -->
@@ -145,45 +180,82 @@
 
         </header>
 
-        <!-- ========================  Rooms ======================== -->
+        <!-- ========================  Blog ======================== -->
 
         <section class="page">
 
-            <!-- ========================  Page header ======================== -->
+            <!-- ===  Page header === -->
 
-            <div class="page-header" style="background-image:url(assets/images/header-1.jpg);padding-bottom:0">
+            <div class="page-header" style="background-image: url(assets/images/reviews.jpg)">
                 <div class="container">
-                    <h2 class="title">Gallery</h2>
-                    <p>A tour to AIDEN premises</p>
                 </div>
             </div>
 
+            <!-- ===  Blog item === -->
+
+            <div class="blog blog-item">
+                <div class="container">
+
+                    <div class="row">
+
+                        <!-- === blog-content === -->
+
+                        <div class="col-sm-8 col-md-12">
+
+                            <article>
+
+                                <!--=== blog image ===-->
+                                <!--<div class="image">
+                                    <img src="assets/images/reviews.jpg" alt="" />
+                                </div>-->
+                                <!--=== blog content ===-->
+
+                                <div class="content" style="padding-top: 15px; padding-left: 15px; padding-bottom: 50px;">
+
+                                    <!--=== blog title ===-->
+
+                                    <div class="h1 title">
+                                        Rate Your Stay With AIDEN
+                                    </div>
+                                    <form method="post">
+                                        <div class="rate">
+                                            <input type="radio" id="star5" name="rate" value="5" />
+                                            <label for="star5" title="text">5 stars</label>
+                                            <input type="radio" id="star4" name="rate" value="4" />
+                                            <label for="star4" title="text">4 stars</label>
+                                            <input type="radio" id="star3" name="rate" value="3" />
+                                            <label for="star3" title="text">3 stars</label>
+                                            <input type="radio" id="star2" name="rate" value="2" />
+                                            <label for="star2" title="text">2 stars</label>
+                                            <input type="radio" id="star1" name="rate" value="1" />
+                                            <label for="star1" title="text">1 star</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" value="" placeholder="Your Name" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" value="" placeholder="Your Email" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea rows="10" class="form-control" placeholder="Your comment" required="required"></textarea>
+                                        </div>
+                                        <div class="clearfix text-center">
+                                            <input type="submit" class="btn btn-main" value="Submit" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </div> <!--/row-->
+
+
+                </div><!--/container-->
+            </div> <!--/blog-item-->
         </section>
 
-        <br />
-        <br />
-        <br />
-        <!-- ========================  Cards ======================== -->
-        <div class="row">
-            <div class="col-sm-12">
 
-                <section class="galeria" style="padding-bottom:0">
-                    <div class="container">                        
-<h1 class="tit"><img src="assets/images/swimming-pool-svgrepo-com.svg"class="svgheight"/></h1>
-                        <div class="contenedorImgs"></div>
-                        <hr class="hr-4"/>                        
-                    </div>
-                </section>
-                <section class="galeriaRes" style="padding-top:0">
-                    <div class="container">
-                        <h1 class="tit">
-<img src="assets/images/restaurant-plate-svgrepo-com.svg" class="svgheight"/></h1>
-                        <div class="resImgs"></div>
-                    </div>
-                </section>
-                
-            </div>
-        </div>
 
         <!-- ========================  Subscribe ======================== -->
 
@@ -208,13 +280,13 @@
             <div class="container">
 
                 <!--footer links-->
-                 <div class="footer-links">
+                <div class="footer-links">
                     <div class="row">
                         <div class="col-sm-6 footer-left">
-                            
+
                         </div>
-                         <div class="col-sm-6 footer-right">
-                              <a href="gallery.html">Gallery</a> &nbsp; |   &nbsp; <a class="box" href="tel:8956582136">
+                        <div class="col-sm-6 footer-right">
+                            <a href="gallery.html">Gallery</a> &nbsp; |   &nbsp; <a class="box" href="tel:8956582136">
                                 <i class="icon icon-phone-handset"></i>
                                 8956582136
                             </a>| &nbsp; <a class="box" href="tel:8956582137">
@@ -234,8 +306,8 @@
                         </div>
                         <div class="col-sm-12 icons">
                             <ul>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>                                
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>                                
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                             </ul>
                         </div>
                         <div class="col-sm-12 copyright">
@@ -257,6 +329,7 @@
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/jquery.owl.carousel.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
