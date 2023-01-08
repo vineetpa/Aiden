@@ -1,61 +1,42 @@
 <?php
-//$captcha;
-$path = "http://aiden.tutoraroundme.in/".$_POST['return_file'];
+use PHPMailer\PHPMailer\PHPMailer;
 
-//if(isset($_POST['g-recaptcha-response'])){
-//	$captcha=$_POST['g-recaptcha-response'];
-// }
-//  if(!$captcha){
-//	echo '<h2><b>Captcha</b> Validation Required!</h2>';
-//	exit;
- // }
+if (isset($_POST['name']) && isset($_POST['email'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $body = $_POST['body'];
 
- // $secretKey = "6LedQbAaAAAAAEpQksRbZdavvWnFE4uv7pYiGIhh";
- // $ip = $_SERVER['REMOTE_ADDR'];
- // $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
- // $response = file_get_contents($url);
- // $responseKeys = json_decode($response,true);
+    require_once "PHPMailer/PHPMailer.php";
+    require_once "PHPMailer/SMTP.php";
+    require_once "PHPMailer/Exception.php";
 
+    $mail = new PHPMailer();
 
-if($_POST['Email']!="")
-{
-	$subject = $_POST['subject'];
-	$message = '<h2 style="margin-top:0;">'.$_POST['subject'].'</h2>';
-	foreach($_POST as $key=>$value)
-	{
-		if(isset($$key)) continue;
-		$invalid_fields = array("emailto","return_file","sub");
-		if(!in_array($key,$invalid_fields))
-		{
-			$message.="$key:- <b>".$value."</b><br><br>";
-		}
-	}
-	$headers  = 'MIME-Version: 1.0' . "\r\n";
-	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers .= 'From: '. $_POST['Name'] .' <'. $_POST['Email'] .'>' . "\r\n";
-	$headers .= 'Reply-To: '. $_POST['Name'] .' <'. $_POST['Email'] .'>' . "\r\n"."X-Mailer: PHP/" . phpversion();			;
-	mail($_POST['emailto'], $subject, $message, $headers);
+    //SMTP Settings
+    $mail->isSMTP();
+    $mail->Host = "smtp.gmail.com";
+    $mail->SMTPAuth = true;
+    $mail->Username = "vineetpa@gmail.com";
+    $mail->Password = "qtjbjwzdwphwbwap";
+    $mail->Port = 465;
+    $mail->SMTPSecure = "ssl";
 
-	$message2 = "Hi ". $_POST['Name'] .",<br>
-	A delivery receipt informs you that your e-mail for ". $_POST['subject'] ." was delivered to the recipient's mailbox, but not that the recipient has seen it or read it. The receipt informs you that your message has been opened.<br><br>
-	The folllowing message has been delivered:<br><br>"
-	.$message;
-	$headers2  = 'MIME-Version: 1.0' . "\r\n";
-	$headers2 .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers2 .= 'From: '. $_POST['emailto'] . "\r\n";
-	$headers2 .= 'Reply-To: '. $_POST['emailto'] . "\r\n";
-	mail($_POST['Email'], $subject, $message2, $headers2);
-?>
-	<script type="text/javascript">
-		//window.location="<?php //echo $_SERVER['HTTP_REFERER'];?>?msg=success";
-		window.location="<?php echo $path; ?>?msg=success";
-	</script>
-<?php
+    //Email Settings
+    $mail->isHTML(true);
+    $mail->setFrom($email, $name);
+    $mail->addAddress("er.vishalverma85@gmail.com"); //enter you email address
+    $mail->Subject = ("$email ($subject)");
+    $mail->Body = $body;
+
+    if ($mail->send()) {
+        $status = "success";
+        $response = "Email is sent!";
+    } else {
+        $status = "failed";
+        $response = "Something is wrong: <br><br>" . $mail->ErrorInfo;
+    }
+
+    exit(json_encode(array("status" => $status, "response" => $response)));
 }
-else
-{ ?>
-	<script type="text/javascript">
-		//window.location="<?php //echo $_SERVER['HTTP_REFERER'];?>?msg=error"
-		window.location="<?php echo $path; ?>?msg=error"
-	</script>
-<?php }?>
+?>
