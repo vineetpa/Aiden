@@ -268,11 +268,10 @@
         .elem {
             display: inline-block;
             font-size: 0;
-            width: 33%;
+            width: 32%;
             border: 20px solid transparent;
             border-bottom: none;
-            background: #fff;
-            padding: 10px;
+            background: #fff; 
             height: auto;
             background-clip: padding-box;
         }
@@ -285,6 +284,21 @@
                 background-size: cover;
                 background-position: center center;
             }
+
+        @media only screen and (max-width: 600px) {
+            .gallartytoppadding {
+                padding-top: 0px;;
+            }
+            .divmargin{
+                margin-top: 10px;
+            }
+        }
+        @media (min-width: 800px) {
+            .divmargin {
+                margin-top: 70px;
+            }
+            /* CSS that should be displayed if width is equal to or less than 800px goes here */
+        }
     </style>
 
 
@@ -408,7 +422,7 @@
 
         <!-- ========================  Rooms ======================== -->
 
-        <section class="page">
+        <section class="page ">
 
             <!-- ========================  Page header ======================== -->
 
@@ -420,14 +434,13 @@
             </div>
 
         </section>
+       <div class="divmargin">
 
-        <br />
-        <br />
-        <br />
+       </div>
         <!-- ========================  Cards ======================== -->
         <div class="row">
             <div class="col-sm-12">
-                <section style=" padding-bottom: 0">
+                <section class="gallartytoppadding" style=" padding-bottom: 0">
                     <div class="container">
                         <div class="content">
                             <a class="elem" href="assets/images/gallery/AidenView/DJI_0334.jpg" title="Aiden Outer View">
@@ -632,10 +645,12 @@
                         </div>
                         <div class="col-sm-12 icons">
                             <ul>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>                                
-                                <li><a class="box" href="https://www.facebook.com/aidenvagatorgoa/" target="_blank">
-    <i class="fa fa-facebook"></i>
-</a></li>                                
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li>
+                                    <a class="box" href="https://www.facebook.com/aidenvagatorgoa/" target="_blank">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-sm-12 copyright">
