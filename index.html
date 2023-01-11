@@ -94,11 +94,13 @@
 
         #fade:hover ~ #boxclose {
             display: none;
-        }
+        } 
     </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body>   
+<body>
     <div class="page-loader"></div>
 
     <div class="wrapper">
@@ -118,7 +120,7 @@
                     <div class="navigation-top-left">
                         <a class="box" href="https://www.instagram.com/aidenvagatorgoa/" target="_blank">
                             <i class="fa fa-instagram"></i>
-                        </a>                        
+                        </a>
                         <a class="box" href="https://www.facebook.com/aidenvagatorgoa/" target="_blank">
                             <i class="fa fa-facebook"></i>
                         </a>
@@ -172,6 +174,9 @@
                             </li>
                             <li>
                                 <a href="gallery.html">Aiden Tour </a>
+                            </li>
+                            <li>
+                                <a href="Celeb-Bytes.html">Star Bytes </a>
                             </li>
                         </ul>
 
@@ -252,7 +257,7 @@
                     <div class="box box-bottom text-center">
                         <div class="container">
                             <h2 class="title animated h1" data-animation="fadeInDown">Rediscover, serenity</h2>
-                            <div class="desc animated" data-animation="fadeInUp">Where comfort meets style</div> 
+                            <div class="desc animated" data-animation="fadeInUp">Where comfort meets style</div>
                             <!--<div class="animated" data-animation="fadeInUp">
                                 <a href="#" class="btn btn-clean">Get insipred</a>
                             </div>-->
@@ -392,7 +397,7 @@
                         <!--=== button ===-->
 
                         <div class="col-xs-12 col-sm-4">
-                            <a href="#" class="btn btn-clean">
+                            <a href="#" class="btn btn-clean" onclick="booknow()">
                                 Book now
                                 <small>Best Prices Guaranteed</small>
                             </a>
@@ -583,7 +588,7 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Near by <a href="#" class="btn btn-sm btn-clean-dark">View all</a></h2>
+                    <h2 class="title">Near by </h2>
                     <p>Here's a selection of places you can visit near by hotel</p>
                 </div>
             </div>
@@ -923,10 +928,12 @@
                             <a href="" class="footer-logo"><img src="assets/images/logo.png" alt="Alternate Text" /></a>
                         </div>
                         <div class="col-sm-12 icons">
-                            <ul>                                
-                                <li><a class="box" href="https://www.facebook.com/aidenvagatorgoa/" target="_blank">
-    <i class="fa fa-facebook"></i>
-</a></li>
+                            <ul>
+                                <li>
+                                    <a class="box" href="https://www.facebook.com/aidenvagatorgoa/" target="_blank">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
                                 <li><a href="https://www.instagram.com/aidenvagatorgoa/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
@@ -973,8 +980,25 @@
             document.getElementById('fade').style.display = 'none';
             lightBoxVideo.pause();
         }
+        function booknow() {
+            Swal.fire({
+                title: 'Call on below provided numbers for booking',
+                width: '500px',
+                height: 'auto !important', 
+                grow: 'row',
+                html: 
+                    '<div class="text-center" style="font-size: 20px;"><span class="icon icon-phone"></span><br/>' +
+                    '<span> +918956582136 <br /> +918956582137  </span>' +
+                    ' </div> ',
+                showCloseButton: true,
+                focusConfirm: false,
+                confirmButtonText:
+                    '<i class="fa fa-thumbs-up"></i> OK!',
+                confirmButtonAriaLabel: 'Thumbs up, great!',
+            })
+        }
     </script>
 
-</body>
+    </body>
 
 </html>
