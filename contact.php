@@ -256,7 +256,8 @@
                                                     <strong>Call us</strong>
                                                     <span>
                                                          +918956582136 <br />
-                                                         +918956582137
+                                                         +918956582137 <br />
+                                                        Desk No : 0832-26742030
                                                     </span>
                                                 </figcaption>
                                             </figure>
