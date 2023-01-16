@@ -461,6 +461,19 @@ nav.navigation-main .logo .logo-desktop {
     width: 100%;
     margin: 0 auto;
   }
+    .logofooter {
+        width: 10%;
+    } 
+}
+@media only screen and (max-width: 600px) {
+    .logofooter { 
+        width: 30%;
+    } 
+}
+
+.logo-mobilewidth{
+    width: 100px;
+    margin-left: 20px;
 }
 
 nav.navigation-main .logo > a {
