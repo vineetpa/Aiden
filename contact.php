@@ -101,7 +101,7 @@
                     <div class="logo animated fadeIn">
                         <a href="index.html">
                             <img class="logo-desktop" src="assets/images/logo.png" alt="Alternate Text" />
-                            <img class="logo-mobile" src="assets/images/logo-mobile.png" alt="Alternate Text" />
+                            <img class="logo-mobile logo-mobilewidth" src="assets/images/logo.png" alt="Alternate Text" />
                         </a>
                     </div>
 
@@ -351,7 +351,7 @@
                             <small>Copyright AIDEN &copy; 2022 &nbsp;</small>
                         </div>
                         <div class="col-sm-12 text-center">
-                            <img src="assets/images/logo-footer.png" alt="" />
+                            <img src="assets/images/logo.png" alt="" class="logofooter" />
                         </div>
                     </div>
                 </div>
