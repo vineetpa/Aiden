@@ -11,12 +11,13 @@
     <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Meta tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Please use this form if you have any questions about us
+and we&#39;ll get back with you very soon.">
+    <meta name="author" content="Aiden Vagtor">
     <link rel="icon" href="favicon.ico">
 
     <!--Title-->
-    <title>Contact | Aiden by Best Western Vagator Goa</title>
+    <title>Contact Us | Aiden Vagator | Aidenvagator.com</title>
 
     <!--CSS styles-->
     <link rel="stylesheet" media="all" href="css/bootstrap.css" />
@@ -100,8 +101,8 @@
 
                     <div class="logo animated fadeIn">
                         <a href="index.html">
-                            <img class="logo-desktop" src="assets/images/logo.png" alt="Alternate Text" />
-                            <img class="logo-mobile logo-mobilewidth" src="assets/images/logo.png" alt="Alternate Text" />
+                            <img class="logo-desktop" src="assets/images/aiden-Vagator-Logo.png" alt="Aiden by Best Western Vagator Goa" title="by Best Western Vagator Goa" />
+                            <img class="logo-mobile logo-mobilewidth" src="assets/images/aiden-Vagator-Logo.png" alt="Aiden by Best Western Vagator Goa" title="by Best Western Vagator Goa" />
                         </a>
                     </div>
 
@@ -297,7 +298,7 @@
         <section class="subscribe">
             <div class="container">
                 <div class="box">
-                    <h2 class="title">Subscribe</h2>
+                    Subscribe
                     <div class="text">
                         <p>& stay updated with latest deals on staying with us</p>
                     </div>
@@ -317,9 +318,19 @@
                 <!--footer links-->
                <div class="footer-links">
                     <div class="row">
-                        <div class="col-sm-6 footer-left">
-                            
+                       <div class="col-sm-6 footer-left">
+                            REACH US<br /><br />
+                            <i class="fa fa-envelope"></i>&nbsp;
+                            reservations@aidenvagatorgoa.com <br />
+                            <i class="fa fa-envelope"></i>&nbsp;
+                            fom@aidenvagatorgoa.com <br />
+
+                            <a href="http://maps.google.com/maps?q=330/1%20Anjuna%20Vagator%20Mapusa%20Goa%2C%20403502" target="_blank">
+                                <span class="icon icon-map-marker"></span> &nbsp
+                                <span>SY. No. 330/1, Anjuna, Vagator, Mapusa, Goa 403502</span>
+                            </a>                            
                         </div>
+                        <div>&nbsp;</div>
                          <div class="col-sm-6 footer-right">
                               <a href="gallery.html">Gallery</a> &nbsp; |   &nbsp; <a class="box" href="tel:8956582136">
                                 <i class="icon icon-phone-handset"></i>
@@ -337,7 +348,7 @@
                <div class="footer-social">
                     <div class="row">
                         <div class="col-sm-12 text-center hidden">
-                            <a href="" class="footer-logo"><img src="assets/images/logo.png" alt="Alternate Text" /></a>
+                            <a href="" class="footer-logo"><img src="assets/images/aiden-Vagator-Logo.png" alt="Aiden by Best Western Vagator Goa" title="by Best Western Vagator Goa" /></a>
                         </div>
                         <div class="col-sm-12 icons">
                             <ul>
@@ -348,10 +359,10 @@
                             </ul>
                         </div>
                         <div class="col-sm-12 copyright">
-                            <small>Copyright AIDEN &copy; 2022 &nbsp;</small>
+                            <small>Copyright AIDEN VAGATOR &copy; 2022 &nbsp;</small>
                         </div>
                         <div class="col-sm-12 text-center">
-                            <img src="assets/images/logo.png" alt="" class="logofooter" />
+                            <img src="assets/images/aiden-Vagator-Logo.png" alt="Aiden by Best Western Vagator Goa" title="by Best Western Vagator Goa" class="logofooter" />
                         </div>
                     </div>
                 </div>
