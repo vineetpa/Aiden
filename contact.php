@@ -122,6 +122,10 @@ and we&#39;ll get back with you very soon.">
                                 <a href="index.html">Home</a>
 
                             </li>
+                             <li>
+                                <a href="about.html">About Us</a>
+
+                            </li>
                             <li>
                                 <a href="rooms-category.html">Rooms </a>
                             </li>
