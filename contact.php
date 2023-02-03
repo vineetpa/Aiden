@@ -100,7 +100,7 @@ and we&#39;ll get back with you very soon.">
                     <!-- logo -->
 
                     <div class="logo animated fadeIn">
-                        <a href="index.html">
+                        <a href="./">
                             <img class="logo-desktop" src="assets/images/aiden-Vagator-Logo.png" alt="Aiden by Best Western Vagator Goa" title="by Best Western Vagator Goa" />
                             <img class="logo-mobile logo-mobilewidth" src="assets/images/aiden-Vagator-Logo.png" alt="Aiden by Best Western Vagator Goa" title="by Best Western Vagator Goa" />
                         </a>
@@ -119,7 +119,7 @@ and we&#39;ll get back with you very soon.">
 
                         <ul class="navigation-left">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="./">Home</a>
 
                             </li>
                              <li>
