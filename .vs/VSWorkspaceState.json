@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\css",
+    "\\js"
   ],
-  "SelectedNode": "\\constant.php",
   "PreviewInSolutionExplorer": false
 }
