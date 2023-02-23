@@ -147,6 +147,9 @@ and we&#39;ll get back with you very soon.">
                                 <a href="rate-stay.html">Rate your stay </a>
                             </li>
                             <li>
+                                <a href="blog-aiden.html">Blogs</a>
+                            </li>
+                            <li>
                                 <a href="contact.php">Contact</a>
                             </li>
                         </ul>
