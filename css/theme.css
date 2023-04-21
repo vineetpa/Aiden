@@ -5360,3 +5360,10 @@ footer .footer-social .copyright {
     width: 407px;
     height: 267px;
 }
+
+.isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
