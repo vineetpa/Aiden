@@ -98,6 +98,26 @@ private parking, a fitness centre and a terrace.">
         #fade:hover ~ #boxclose {
             display: none;
         }
+
+        .div-img {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        #offer {
+            transition: transform .2s;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            background-color: rgb(173, 173, 237);
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+            #offer:hover {
+                transform: scale(1.5);
+            }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -440,7 +460,12 @@ private parking, a fitness centre and a terrace.">
 
             <!-- === welcome content === -->
             <div class="container">
-                Aiden by Best Western, is a nook of serene charm where even the susegad life comes to unwind.Being a guest at Aiden Vagator means being a guest at one of North Goa's trendiest locations. The area provide you the access to some of Goa's most beautiful views and also to the popular nearby places like Chapora Fort, Vagator beach, hill-top party place etc. Vagator has a long history of being a party hotspot, and this season has seen the opening of new lifestyle establishment like Daivya's, one of the finest north indian cuisine restaurant at aiden by best western, where one can deep dive into robust north indian delights. The renowned Goa Collective Bazaar at the HillTop is also located in Vagator. While you can unwind in luxury at the Aiden with the most breathtaking views, Goa's vibrant nightlife is only a short distance away.
+                <div class="col-sm-6">
+                    Aiden by Best Western, is a nook of serene charm where even the susegad life comes to unwind.Being a guest at Aiden Vagator means being a guest at one of North Goa's trendiest locations. The area provide you the access to some of Goa's most beautiful views and also to the popular nearby places like Chapora Fort, Vagator beach, hill-top party place etc. Vagator has a long history of being a party hotspot, and this season has seen the opening of new lifestyle establishment like Daivya's, one of the finest north indian cuisine restaurant at aiden by best western, where one can deep dive into robust north indian delights. The renowned Goa Collective Bazaar at the HillTop is also located in Vagator. While you can unwind in luxury at the Aiden with the most breathtaking views, Goa's vibrant nightlife is only a short distance away.
+                </div>
+                <div class="col-sm-6 div-img">
+                    <img id="offer" src="assets/images/Offer.jpeg" />
+                </div>
             </div>
         </section>
 
@@ -950,7 +975,10 @@ private parking, a fitness centre and a terrace.">
 
                             <a href="http://maps.google.com/maps?q=330/1%20Anjuna%20Vagator%20Mapusa%20Goa%2C%20403502" target="_blank">
                                 <span class="icon icon-map-marker"></span> &nbsp
-                                <span>SY. No. 330/1, Anjuna, Vagator, Mapusa, Goa 403502</span>
+                                <span>
+                                    PLOT NO 330/1, Tembi Store Mazal Waddo Anjuna Bardez, Vagator
+                                    Beach Road, North Goa, Anjuna, North Goa, Goa, 403509
+                                </span>
                             </a>
                         </div>
                         <div>&nbsp;</div>
